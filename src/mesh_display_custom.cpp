@@ -7,6 +7,9 @@
  *
  * Latest changes (12/11/2012):
  * - fixed segfault issues
+ * modify(4/6/2022):
+ * jmshin(woawo1213@gmail.com)
+ * - add texture transform
  */
 /*
  * Copyright (c) 2008, Willow Garage, Inc.
@@ -297,7 +300,6 @@ void MeshDisplayCustom::constructQuads( const rviz_textured_quads::TexturedQuadA
         processImage(q, images->quads[q].image);
 
         geometry_msgs::Pose mesh_origin = images->quads[q].pose;
-        // 2021.05.27 ('c')void
         {
             Eigen::Affine3d T_m2c; // marker to camera
             tf::poseMsgToEigen(mesh_origin, T_m2c); // point msg를 eigen vector 로 변환
