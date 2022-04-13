@@ -48,6 +48,7 @@ def pub_image():
     display_image.border_color = [1., 0., 0., 0.5]
     display_image.border_size = 0.05
     display_image.caption = 'Marker'
+    # add frame id , 2022.04.05
     display_image.image.header.frame_id = 'map'
 
 

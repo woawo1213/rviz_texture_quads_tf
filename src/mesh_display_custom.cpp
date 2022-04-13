@@ -300,6 +300,7 @@ void MeshDisplayCustom::constructQuads( const rviz_textured_quads::TexturedQuadA
         processImage(q, images->quads[q].image);
 
         geometry_msgs::Pose mesh_origin = images->quads[q].pose;
+        // add transform, 2022.04.05
         {
             Eigen::Affine3d T_m2c; // marker to camera
             tf::poseMsgToEigen(mesh_origin, T_m2c); // point msg를 eigen vector 로 변환
